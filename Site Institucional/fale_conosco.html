@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-form.css">
+    
+	<title>Fale Conosco | Termoguard</title>
+    <link rel="shortcut icon" href="./img/foto.jpg" type="image/x-icon">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1 class="titulo"><img src="img/Screenshot from 2023-04-28 11-30-48.png" style="width: 40%;"/></h1>
+                <ul class="navbar">
+                <li><a href="inicial.html">Início</a></li>
+                <li><a href="calculadora_pg.html">Simulador</a></li>
+                <li><a href="sobre_nos.html">Sobre Nós</a></li>
+                <li><a href="fale_conosco.html">Fale Conosco</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </div>
+    </div>
+    
+	<div class="banner">
+	<div class="formulario">
+		<h2>Fale Conosco</h2>
+		<label for="nome">Nome:</label>
+		<input type="text" id="input_nome" name="nome" placeholder="Seu nome..">
+
+		<label for="email">E-mail:</label>
+		<input type="text" id="input_email" name="email" placeholder="Seu e-mail..">
+
+		<label for="assunto">Assunto:</label>
+		<input type="text" id="input_assunto" name="assunto" placeholder="Assunto..">
+
+		<label for="mensagem">Mensagem:</label>
+		<textarea id="input_mensagem" name="mensagem" placeholder="Digite sua mensagem.." style="height:200px"></textarea>
+
+		<button onclick="enviar()">Enviar</button>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <h4>
+            TermoGuard, controlando a temperatura do seu futuro! &hearts; 2023/1
+        </h4>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    function enviar() {
+        var nome = input_nome.value
+        var email = input_email.value
+        var assunto = input_assunto.value
+        var mensagem = input_mensagem.value
+	
+        if (nome != "" && mensagem != "" && assunto != "" && mensagem != "") {
+            alert(`Sua Mensagem foi salva com sucesso!  Muito Obrigado pela Colaboração`)
+        } else {
+            alert("Dados Invalidos")
+        }
+    }
+</script>

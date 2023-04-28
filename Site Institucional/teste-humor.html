@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Em uma escala de 0 a 10, o quão feliz você está hoje? <input type="number" min="0" max="10" id="input_feliz">
+    <button onclick="verificar_humor()">Verificar o álbum</button>
+    <div id="div_frase"></div>
+</body>
+</html>
+
+<script>
+    function verificar_humor(){
+        var felicidade = Number(input_feliz.value);
+
+        if (felicidade == 0) {
+            div_frase.innerHTML = `O emo verdadeiro, recomendo o álbum "Ciano" para você chorar sozinho no quarto.`
+        } else if (felicidade > 0 && felicidade <= 3){
+            div_frase.innerHTML = `Está deprê mas já foi pior, o álbum perfeito pra você nesse momento é "Infinito"`
+        } else if (felicidade > 3 && felicdade <= 5){
+            div_frase.innerHTML = `Calma emo, tudo vai melhorar se você ouvir "A sinfonia de tudo que há"`
+        } else if (felicidade >5 && felicidade <= 8){
+        div_frase.innerHTML = `O dia tá ótimo para você ouvir "Vou ter que me virar"`
+        } else {
+            div_frase.innerHTML = `Muita alegria, bota seu vans e sua calça apertada e vai pro rolê ouvindo "remix de sua alegria foi cancelada`
+        }
+    }
+</script>
