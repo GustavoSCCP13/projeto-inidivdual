@@ -17,7 +17,7 @@
                 <li><a href="inicial.html">Início</a></li>
                 <li><a href="cd_do_dia.html">CD do dia</a></li>
                 <li><a href="sobre_nos.html">Sobre Nós</a></li>
-                <li><a href="fale_conosco.html">Fale Conosco</a></li>
+                <li><a href="faça-parte.html">Faça parte do time</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
             </ul>
@@ -38,15 +38,15 @@
         var felicidade = Number(input_feliz.value); 
 
         if (felicidade == 0) {
-            div_frase.innerHTML = `O emo verdadeiro, recomendo o álbum "Ciano" para você chorar sozinho no quarto. Para ouvir esse cd, acesse o link:https://youtube.com/playlist?list=PLYlQ0qMv1Q90VKmgANQ6GhZ4NXCp6pg5r`;
+            div_frase.innerHTML = `O emo verdadeiro, recomendo o álbum "Ciano" para você chorar sozinho no quarto. Para ouvir esse cd, acesse o link:<a href="https://youtube.com/playlist?list=PLYlQ0qMv1Q90VKmgANQ6GhZ4NXCp6pg5r">https://youtube.com/playlist?list=PLYlQ0qMv1Q90VKmgANQ6GhZ4NXCp6pg5r</a>`;
         } else if (felicidade > 0 && felicidade <= 3){
-            div_frase.innerHTML = `Está deprê mas já foi pior, o álbum perfeito pra você nesse momento é "Infinito"`
+            div_frase.innerHTML = `Está deprê mas já foi pior, o álbum perfeito pra você nesse momento é "Infinito". Ouça agora: <a href="https://www.youtube.com/playlist?list=PLYlQ0qMv1Q92Z6M_LeGXk0etgLojgoAgK">https://www.youtube.com/playlist?list=PLYlQ0qMv1Q92Z6M_LeGXk0etgLojgoAgK</a>`
         } else if (felicidade > 3 && felicidade <= 5){
-            div_frase.innerHTML = `Calma emo, tudo vai melhorar se você ouvir "A sinfonia de tudo que há"`
+            div_frase.innerHTML = `Calma emo, tudo vai melhorar se você ouvir "A sinfonia de tudo que há". Ouça agora: <a href="https://www.youtube.com/playlist?list=PLYlQ0qMv1Q92Q0YwEJWQeMMPjqRz5Boyr">https://www.youtube.com/playlist?list=PLYlQ0qMv1Q92Q0YwEJWQeMMPjqRz5Boyr</a>`
         } else if (felicidade >5 && felicidade <= 8){
-        div_frase.innerHTML = `O dia tá ótimo para você ouvir "Vou ter que me virar"`
+        div_frase.innerHTML = `O dia tá ótimo para você ouvir "Vou ter que me virar". Ouça agora: <a href="https://www.youtube.com/playlist?list=PLYlQ0qMv1Q92mGPqd0maZzmyGqehTt_GF">https://www.youtube.com/playlist?list=PLYlQ0qMv1Q92mGPqd0maZzmyGqehTt_GF</a>`
         } else {
-            div_frase.innerHTML = `Muita alegria, bota seu vans e sua calça apertada e vai pro rolê ouvindo "remix de sua alegria foi cancelada`
+            div_frase.innerHTML = `Muita alegria, bota seu vans e sua calça apertada e vai pro rolê ouvindo "remix de sua alegria foi cancelada". Ouça agora: <a href="https://www.youtube.com/watch?v=S63i1vB_p5M&ab_channel=Fresno-Topic">https://www.youtube.com/watch?v=S63i1vB_p5M&ab_channel=Fresno-Topic</a>`
         }
     }
 </script>
