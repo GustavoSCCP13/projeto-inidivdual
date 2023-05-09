@@ -5,8 +5,8 @@ body {
 /* Banner */
 
 .banner_cor {
-  background-color: #00ffff;
-  height: 25%;
+  background-color: #f3f3f3;
+  height: 35%;
 }
 
 .banner_cor .container {
@@ -40,7 +40,7 @@ body {
   align-items: center;
   justify-content: baseline;
   height: 100%;
-  padding: 8% 0% 10% 0%;
+  padding: 0% 1% 10% 1%;
 }
 
 .secao_texto img {
