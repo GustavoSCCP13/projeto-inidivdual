@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="./img/logo pequena.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-form.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <h1 class="titulo"><img src="./img/teste.png" style="width: 40%; height: 95%;"/></h1>
+
+            <ul class="navbar">
+                <li><a href="Inicial.html"><b>Início</b></a></li>
+                <li><a href="cd_do_dia.html"><b>CD do dia</b></a></li>
+                <li><a href="bio.html"><b>Biografia</b></a></li>
+                <li><a href="votacao.html"><b>Votação</b></a></li>
+                <li><a href="login.html"><b>Login</b></a></li>
+                <li><a href="cadastro.html"><b>Cadastro</b></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="banner">
+
+        <div class="formulario">
+            <h4 id="saudacao">Bem-vindo de volta!</h4>
+
+
+            <h4>Email:</h4>
+            <input id="input_email" type="email">
+
+            <h4> Senha:</h4>
+            <input id="input_senha" type="password">
+
+
+
+            <button onclick="validar()">Login</button>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <h4>
+                Make emo great again! &hearts; 2023/1
+            </h4>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    function validar() {
+        var email = input_email.value
+        var senha = input_senha.value;
+
+
+if (email == "" || senha == "") {
+    msgErro.style.display = "block"
+    msgErro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+    finalizarAguardar();
+    return false;
+}
+
+console.log("FORM LOGIN: ", email);
+console.log("FORM SENHA: ", senha);
+
+fetch("/usuarios/autenticar", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        emailServer: email,
+        senhaServer: senha
+    })
+}).then(function (resposta) {
+    console.log("ESTOU NO THEN DO entrar()!")
+
+    if (resposta.ok) {
+        console.log(resposta);
+
+        resposta.json().then(json => {
+            console.log(json);
+            console.log(JSON.stringify(json));
+
+            sessionStorage.EMAIL_USUARIO = json.email;
+            sessionStorage.NOME_USUARIO = json.nome;
+            sessionStorage.ID_USUARIO = json.id;
+
+            setTimeout(function () {
+                window.location = "./inicial.html";
+            }, 1000); // apenas para exibir o loading
+
+        });
+
+    } else {
+
+        console.log("Houve um erro ao tentar realizar o login!");
+
+        resposta.text().then(texto => {
+            console.error(texto);
+            finalizarAguardar(texto);
+        });
+    }
+
+}).catch(function (erro) {
+    console.log(erro);
+})
+
+return false;
+}
+
+</script>
