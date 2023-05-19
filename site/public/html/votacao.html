@@ -61,291 +61,82 @@
 
 <script>
     function formular(){
-        var novoBotao = document.createElement('button');
-        novoBotao.innerText = 'Registrar voto';
-        document.getElementById('local-botao').appendChild(novoBotao);
         var select_option = select_cd.value;
 
     }
     function registrar(){
         var select_option = select_cd.value;
         if (select_option == 'O acaso do erro') {
-            div_form.innerHTML = `<h2>O acaso do erro</h2>
-            <h4>Música:&nbsp<select id="select_calc" onchange="formular()"></h4>
-                <option>Mundo Injusto</option>
-                <option>Seu Namorado É Um Idiota</option>
-                <option>Se Ao Menos Você Voltasse</option>
-                <option>Frases Engasgadas</option>
-                <option>A 7 Palmos do Chão</option>
-                <option>Se Algum Dia Eu Não Acordar</option>
+            div_form.innerHTML = `<h2>Obrigado por votar! =D</h2>
+            
             `
             
 
 
     } else if (select_option == 'Quarto dos livros'){
-        div_form.innerHTML = `<h2>Quarto dos livros</h2>
-            <h4>Música:&nbsp<select id="select_calc" onchange="formular()"></h4>
-                <option>Desde Já</option>
-                <option>Teu Semblante</option>
-                <option>Stonehenge</option>
-                <option>Mais um Soldado</option>
-                <option>1 Eu Sem 1 Você</option>
-                <option>Se Algum Dia Eu Não Acordar</option>
-                <option>Carpe Diem</option>
-                <option>Carta</option>
-                <option>Sono Profundo</option>
-                <option>O Gelo</option>
+        div_form.innerHTML = `<h2>Obrigado por votar! =D</h2>
+            
 
             `
     } else if (select_option == 'O rio, a cidade e a árvore'){
-        div_form.innerHTML = `<h2>O rio, a cidade e a árvore</h2>
-            <h4>Música:&nbsp<select id="select_calc" onchange="formular()"></h4>
-                <option>Duas Lágrimas</option>
-                <option>Onde Está</option>
-                <option>Impossibilidades</option>
-                <option>Experiência</option>
-                <option>Planos e Promessas</option>
-                <option>Orgulho</option>
-                <option>O Que Sobrou</option>
-                <option>Velha História</option>
-                <option>Evaporar</option>
-                <option>Outra Vez</option>
-                <option>Pergunta</option>
-
+        div_form.innerHTML = `<h2>Obrigado por votar! =D</h2>
+       
 
             `
     } else if (select_option == 'Ciano'){
-        div_form.innerHTML = `<h2>Ciano</h2> <img src="./img/ciano.jpg" style="width: 40%; height: 95%;" alt="">
-            <h4>Música:&nbsp<select id="select_calc" onchange="formular()"></h4>
-
-                <option>Infância</option>
-
-                <option>Quebre As Correntes</option>
-
-                <option>Alguém Que Te Faz Sorrir</option>
-
-                <option>Logo Você</option>
-
-                <option>Enferrujou</option>
-
-                <option>Teu Semblante</option>
-
-                <option>O Peso do Mundo</option>
-
-                <option>Soneto para Petr Cech</option>
-
-                <option>O Que Hoje Você Vê</option>
-
-                <option>Stonehenge</option>
-
-                <option>Absolutamente Nada</option>
-
-                <option>Sono Profundo</option>
+        div_form.innerHTML = `<h2>Obrigado por votar! =D</h2> 
+            
 
 
 
             `
     } else if (select_option == 'Redenção'){
-        div_form.innerHTML = `<h2>Redenção</h2>
-            <h4>Música:&nbsp<select id="select_calc" onchange="formular()"></h4>
-
-                <option>Goodbye</option>
-
-                <option>Você Perdeu De Novo</option>
-
-                <option>Polo</option>
-
-                <option>Uma Música</option>
-
-                <option>Passado</option>
-
-                <option>Sobre Todas As Coisas</option>
-
-                <option>Redenção</option>
-
-                <option>Desde Quando Você Se Foi</option>
-
-                <option>Europa</option>
-
-                <option>Milonga</option>
-
-                <option>Contas Vencidas</option>
-
-                <option>Alguém Que Te Faz Sorrir</option>
-
-                <option>Não Quero Lembrar</option>
+        div_form.innerHTML = `<h2>Obrigado por votar! =D</h2>
+            
 
 
             `
     } else if (select_option == 'Revanche'){
-        div_form.innerHTML = `<h2>Revanche</h2>
-            <h4>Música:&nbsp<select id="select_calc" onchange="formular()"></h4>
-
-                <option>Nesse lugar</option>
-
-                <option>A minha história não acaba aqui</option>
-
-                <option>Não leve a mal</option>
-
-                <option>Esteja aqui</option>
-
-                <option>Quando crescer</option>
-
-                <option>Relato de um homem de bom coração</option>
-
-                <option>Eu sei</option>
-
-                <option>Porto Alegre</option>
-
-                <option>Se você voltar</option>
-
-                <option>Deixa o tempo</option>
-
-                <option>Canção da noite</option>
-
-                <option>Die Lüge</option>
-
-                <option>Revanche</option>
+        div_form.innerHTML = `<h2>Obrigado por votar! =D</h2>
+           
 
 
             `
     } else if (select_option == 'Cemitério de boas intenções'){
-        div_form.innerHTML = `<h2>Cemitéio de boas intenções</h2>
-            <h4>Música:&nbsp<select id="select_calc" onchange="formular()"></h4>
-
-                <option>Infinito (Lá, Parte 2 - Acústico)</option>
-
-                <option>Não Vou Mais</option>
-
-                <option>A Gente Morre Sozinho</option>
-
-                <option>Relato De Um Homem De Bom Coração (Acústico)</option>
-
-                <option>Crocodilia</option>
+        div_form.innerHTML = `<h2>Obrigado por votar! =D</h2>
+            
                 `
     } else if (select_option == 'Infinito'){
-        div_form.innerHTML = `<h2>Infinito</h2>
-            <h4>Música:&nbsp<select id="select_calc" onchange="formular()"></h4>
-
-                <option>Vida (Biografia em ré menor)</option>
-
-                <option>Seis</option>
-
-                <option>Cativeiro (Ana Cruse)</option>
-
-                <option>Homem ao mar</option>
-
-                <option>Diga, Part 2</option>
-
-                <option>Sutjeska</option>
-
-                <option>Infinito</option>
-
-                <option>Maior que as muralhas</option>
-
-                <option>Sobreviver e acreditar</option>
-
-                <option>Farol</option>
-
-                <option>O resto é nada mais (O sonho de um visconde)</option>
+        div_form.innerHTML = `<h2>Obrigado por votar! =D</h2>
+            
 
 
             `
     } else if (select_option == 'Eu sou a maré viva'){
-        div_form.innerHTML = `<h2>Eu sou a maré viva</h2>
-            <h4>Música:&nbsp<select id="select_calc" onchange="formular()"></h4>
-
-                <option>Manifesto</option>
-
-                <option>O Único A Perder</option>
-
-                <option>À Prova de Balas</option>
-
-                <option>Eu Sou A Maré Viva</option>
-
-                <option>Icarus</option>
+        div_form.innerHTML = `<h2>Obrigado por votar! =D</h2>
+     
                 `
     } else if (select_option == 'A sinfonia de tudo que há'){
-        div_form.innerHTML = `<h2>A sinfonia de tudo que há</h2>
-            <h4>Música:&nbsp<select id="select_calc" onchange="formular()"></h4>
-
-                <option>Hoje Sou Trovão</option>
-
-                <option>O Ar</option>
-
-                <option>Canção Desastrada</option>
-
-                <option>Sexto Andar</option>
-
-                <option>Abrace Sua Sombra</option>
-
-                <option>Deixa Queimar</option>
-
-                <option>A Sinfonia de Tudo Que Há</option>
-
-                <option>Poeira Estelar</option>
-
-                <option>A Maldição</option>
-
-                <option>Astenia</option>
-
-                <option>Axis Mundi</option>
-
+        div_form.innerHTML = `<h2>Obrigado por votar! =D</h2>
+         
 
             `
     } else if (select_option == 'Sua alegria foi cancelada'){
-        div_form.innerHTML = `<h2>Sua alegria foi cancelada</h2>
-            <h4>Música:&nbsp<select id="select_calc" onchange="formular()"></h4>
-
-                <option>O Arrocha Mais Triste do Mundo</option>
-
-                <option>Sua Alegria Foi Cancelada</option>
-
-                <option>Cada Acidente</option>
-
-                <option>We'll Fight Together</option>
-
-                <option>Isso Não É Um Teste</option>
-
-                <option>Natureza Caos</option>
-
-                <option>Quando Eu Caí</option>
-
-                <option>Eu Não Sei Lidar</option>
-
-                <option>Convicção</option>
-
-                <option>De Verdade</option>
+        div_form.innerHTML = `<h2>Obrigado por votar! =D</h2>
+           
 
             `
     } else {
-        div_form.innerHTML = `<h2>Vou ter que me virar</h2>
-            <h4>Música:&nbsp<select id="select_calc" onchange="formular()"></h4>
-
-                <option>Já Faz Tanto Tempo</option>
-
-                <option>Tell Me Lover</option>
-
-                <option>Casa Assombrada</option>
-
-                <option>FUDEU!!!</option>
-
-                <option>Agora Deixa</option>
-
-                <option>Caminho Não Tem Fim</option>
-
-                <option>Grave Acidente</option>
-
-                <option>Essa Coisa (Acorda - Trabalha - Repete - Mantém)</option>
-
-                <option>Vou Ter Que Me Virar</option>
-
-                <option>6h34 (NEM LIGA GURIA)</option>
-
-                <option>ELES ODEIAM GENTE COMO NÓS</option>
+        div_form.innerHTML = `<h2>Obrigado por votar! =D</h2>
+            
 
             ` 
     }
 
 }
+
+fetch("/avaliacoes/resultadoVotacao").then((resposta)=>{
+    console.log(resposta)
+    var select_optionServer = select_option
+})
         </script>
