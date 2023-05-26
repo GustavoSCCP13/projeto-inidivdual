@@ -6,10 +6,10 @@ function listar() {
     return database.executar(instrucao);
 }
 
-function enviar(titulo, estrelas, mensagem, fkUsuario) {
+function enviar(album, usuario, mensagem, fkUsuario) {
     console.log("ENVIANDO AVALIACOES:");
     let data = new Date;
-    var instrucao = `INSERT INTO usuario (nome, email, senha) VALUES ('${nome}', '${email}', '${senha}');`;
+    var instrucao = `INSERT INTO album  VALUES ('${acaso}', '${quarto}', '${rio}', '${ciano}', '${redencao}', '${revanche}', '${cemiterio}', '${infinito}', '${mare}', '${sinfonia}', '${alegria}', '${virar}');`;
     return database.executar(instrucao);
 }
 

@@ -23,7 +23,7 @@ function enviar(req, res) {
     var id_usuario = req.body.id_usuario;
 
 
-    avaliacaoModel.enviar(titulo, estrelas, mensagem, fkUsuario)
+    avaliacaoModel.enviar(album, usuario, mensagem, fkUsuario)
     .then(function (resultado) {
         
             res.status(200).json(resultado);

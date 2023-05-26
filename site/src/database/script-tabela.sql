@@ -1,15 +1,14 @@
 use projetoIndividual;
 
-
 CREATE TABLE usuario (
 	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(50),
 	email VARCHAR(50),
 	senha VARCHAR(50)
 ); 
+
 insert into usuario values
 (null, 'Gustavao', 'gustavo@morais.com', '123');
-
 
 select * from usuario;
 
@@ -20,7 +19,7 @@ CREATE TABLE aviso (
 	fk_usuario INT,
 	FOREIGN KEY (fk_usuario) REFERENCES usuario(idUsuario)
 );
-
+select * from aviso;
 
 create table album(
 idAlbum int primary key auto_increment,
@@ -48,10 +47,42 @@ alegria char(1), constraint chkVotacaoAlegria CHECK
 	(alegria IN (0, 1)),
 virar char(1), constraint chkVotacaoVirar CHECK
 	(virar IN (0, 1)));
-    insert into album values
-    (null, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    create table votacao(
-    idVotacao int primary key auto_increment,
-    fkCd int, constraint fkCdEscolhido foreign key (fkCd) references album(idAlbum),
-    fkUsuarioVoto int, constraint fkUsuarioVotoEscolhido foreign key (fkUsuarioVoto) references usuario(idUsuario));
     
+ALTER TABLE album ADD COLUMN fkUsuario int,
+	ADD CONSTRAINT fkUsuarioVotacao foreign key (fkUsuario)
+		references usuario(idUsuario);
+        
+        select * from album;
+    
+
+
+    
+    
+    select * from usuario;
+    
+Select 
+	sum(acaso) as acaso,
+	sum(quarto) as quarto,
+    sum(rio) as rio,
+    sum(ciano) as ciano,
+    sum(redencao) as redencao,
+    sum(revanche) as revanche,
+    sum(cemiterio) as cemiterio,
+    sum(infinito) as infinito,
+    sum(mare) as mare,
+    sum(sinfonia) as sinfonia,
+    sum(alegria) as alegria,
+    sum(virar) as virar
+from projetoindividual.album;
+
+ insert into usuario values
+(null, 'Clovao', 'clovis@lana.com', '123'),
+(null, 'Jorginho', 'jorge@inho.com', '123');
+
+insert into album values
+(null, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1),
+(null, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 2);
+
+select * from album;
+
+select * from usuario;
