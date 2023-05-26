@@ -7,19 +7,6 @@ CREATE TABLE usuario (
 	senha VARCHAR(50)
 ); 
 
-insert into usuario values
-(null, 'Gustavao', 'gustavo@morais.com', '123');
-
-select * from usuario;
-
-CREATE TABLE aviso (
-	idAviso INT PRIMARY KEY AUTO_INCREMENT,
-	titulo VARCHAR(100),
-	descricao VARCHAR(150),
-	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(idUsuario)
-);
-select * from aviso;
 
 create table album(
 idAlbum int primary key auto_increment,
@@ -86,3 +73,5 @@ insert into album values
 select * from album;
 
 select * from usuario;
+
+INSERT INTO dbo.album(quarto, fk_usuario) VALUES 1, 1

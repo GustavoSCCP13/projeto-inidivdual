@@ -6,12 +6,13 @@ function listar() {
     return database.executar(instrucao);
 }
 
-function enviar(album, usuario, mensagem, fkUsuario) {
-    console.log("ENVIANDO AVALIACOES:");
-    let data = new Date;
-    var instrucao = `INSERT INTO album  VALUES ('${acaso}', '${quarto}', '${rio}', '${ciano}', '${redencao}', '${revanche}', '${cemiterio}', '${infinito}', '${mare}', '${sinfonia}', '${alegria}', '${virar}');`;
+function enviar(body) {
+    let instrucao = `INSERT INTO album(${body.album}, fkUsuario) VALUES( 1, ${body.id_usuario} )`;
+    console.log(instrucao)
     return database.executar(instrucao);
 }
+
+
 
 
 async function resultadoVotacao(){

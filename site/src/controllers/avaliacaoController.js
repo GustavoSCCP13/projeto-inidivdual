@@ -19,22 +19,18 @@ function listar(req, res) {
 
 function enviar(req, res) {
 
-    var id_cd = req.body.id_cd;
-    var id_usuario = req.body.id_usuario;
-
-
-    avaliacaoModel.enviar(album, usuario, mensagem, fkUsuario)
-    .then(function (resultado) {
+    avaliacaoModel.enviar(req.body)
+//     .then(function (resultado) {
         
-            res.status(200).json(resultado);
+//             res.status(200).json(resultado);
         
-    }).catch(
-        function (erro) {
-            console.log(erro);
-            console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
-            res.status(500).json(erro.sqlMessage);
-        }
-    );
+//     }).catch(
+//         function (erro) {
+//             console.log(erro);
+//             console.log("Houve um erro ao realizar a votacao! Erro: ", erro.sqlMessage);
+//             res.status(500).json(erro.sqlMessage);
+//         }
+//     );
 }
 
 async function resultadoVotacao(req,res){
