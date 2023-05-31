@@ -190,6 +190,40 @@ body {
     max-width: 45%;
     margin: 0% 15% 0% 0%;
 }
+
+/*sobre mim*/
+
+
+.secao_3 {
+    height: 70%;
+    margin: 3% 0;
+    background-color: #c2abf7e1;
+}
+.secao_3 .container {
+    height: 100%;
+    align-items: center;
+    justify-content: right;
+    overflow: hidden;
+}
+
+.secao_3 .caixa_nossa_historia {
+    background-color: white;
+    width: 22.5%;
+    height: 45%;
+    position: absolute;
+    right: 57%; 
+    border-radius: 4px;
+    padding: 4% 4% 6% 4%;
+    
+}
+.secao_3 img {
+    height: auto;
+    width: auto;
+    max-width: 45%;
+    margin: 0% 15% 0% 0%;
+}
+
+
 .caixa_nossa_historia h1 {
     margin-bottom: 5%;
     font-size: 2.0vw;
