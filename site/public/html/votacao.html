@@ -96,13 +96,16 @@
     fetch("avaliacoes/enviar", options)
       .then((response) => response.json())
       .then((data) => {
-      
+ 
       })
+      
       
       .catch((error) => {
         console.error("Erro:", error);
       });
+      window.location = "../dashboard/dashboard.html"
   }
+
   
 
   //fetch("/avaliacoes/resultadoVotacao").then((resposta)=>{

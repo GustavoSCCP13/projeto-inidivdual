@@ -3,6 +3,7 @@
 *,
 body {
   font-family: "Exo 2", sans-serif;
+  
 }
 
 .label-captura {
@@ -119,7 +120,7 @@ body {
   position: relative;
   top: 0;
   left: 20%;
-  background-color: #161618;
+  background-color: white;
   height: 100vh;
   overflow: auto;
 }
@@ -227,7 +228,7 @@ body {
 }
 
 .tituloGraficos {
-  color: rgb(216, 216, 216);
+  color: black;
   display: flex;
   justify-content: center;
 }
@@ -245,7 +246,7 @@ body {
 }
 
 .btn-pink {
-  color: white;
+  color: black;
   background-color: #00FFFF;
 }
 
